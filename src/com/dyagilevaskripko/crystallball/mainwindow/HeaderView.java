@@ -7,4 +7,8 @@ import javafx.scene.layout.VBox;
  */
 public class HeaderView extends VBox
 {
+    public HeaderView()
+    {
+        //
+    }
 }
