@@ -1,13 +1,3 @@
-#circleStackPane
-{
-    -fx-background-color: white;
-}
-
-#canvas
-{
-    -fx-effect: dropshadow(three-pass-box, black, 10, 0, 0, 0);
-}
-
 #resultLabel
 {
     -fx-font-size: 24pt;

@@ -4,13 +4,13 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.ArcType;
 
 /**
  * Created by dyagi on 10.10.2016.
  */
-public class CircleView extends StackPane {
+public class CircleView extends VBox {
     private Label resultLabel;
 
     public CircleView() {
@@ -25,9 +25,11 @@ public class CircleView extends StackPane {
         GraphicsContext gc = canvasBigRound.getGraphicsContext2D();
         drawShapes(gc);
 
-        this.setMinSize(300, 300);
+        StackPane stackPane = new StackPane(canvasBigRound,resultLabel);
+
+        this.setId("mainVBox");
         this.getStylesheets().addAll("/resources/style/Circle.css");
-        this.getChildren().addAll(canvasBigRound,resultLabel);
+        this.getChildren().addAll(stackPane);
     }
 
     private void drawShapes(GraphicsContext gc) {

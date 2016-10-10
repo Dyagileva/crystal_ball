@@ -20,10 +20,14 @@ public class MainWindowView extends BorderPane
     public  MainWindowView()
     {
         VBox headerVBox = createTextFieldVBox();
-        StackPane centerStackPane = new CircleView();
+        headerVBox.setId("headerVBox");
+
+        VBox circleVBox = new CircleView();
+        circleVBox.setId("centerStackPane");
 
         this.setTop(headerVBox);
-        this.setCenter(centerStackPane);
+        this.setCenter(circleVBox);
+        getStylesheets().addAll("/style/Main.css");
     }
 
     public VBox createTextFieldVBox()
@@ -35,7 +39,9 @@ public class MainWindowView extends BorderPane
         minTextField = new TextField();
 
         VBox vBoxResult = new VBox();
-        vBoxResult.getChildren().addAll(maxValueLabel,maxTextField,minValueLabel,minTextField);
+        vBoxResult.setId("vBox");
+        vBoxResult.getChildren().addAll(minValueLabel,minTextField,maxValueLabel,maxTextField);
+        vBoxResult.getStylesheets().add("/resources/style/TextFields.css");
 
         return vBoxResult;
     }
