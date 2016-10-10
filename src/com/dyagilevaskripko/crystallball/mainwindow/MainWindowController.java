@@ -11,22 +11,8 @@ public class MainWindowController
 {
     private MainWindowView mainWindowView;
 
-    public  MainWindowController()
+    public  MainWindowController(MainWindowView mainWindowView)
     {
-        HeaderView headerView = new HeaderView();
-        CenterView centerView = new CenterView();
-        BottomView bottomView = new BottomView();
-
-        mainWindowView = new MainWindowView(headerView,centerView,bottomView);
+       this.mainWindowView = mainWindowView;
     }
-
-    public void show(Stage stage)
-    {
-        Scene mainScene = new Scene(mainWindowView,450,600);
-
-        stage.setTitle("Crystal Ball");
-        stage.setScene(mainScene);
-        stage.show();
-    }
-
 }
