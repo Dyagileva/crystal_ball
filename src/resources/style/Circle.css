@@ -1,5 +1,11 @@
 #resultLabel
 {
     -fx-font-size: 24pt;
-    -fx-padding: 0 0 110 0;
+    -fx-padding: 0 10 15 0;
+}
+
+#stackPane
+{
+    -fx-min-height: 150px;
+    -fx-background-color: white;
 }

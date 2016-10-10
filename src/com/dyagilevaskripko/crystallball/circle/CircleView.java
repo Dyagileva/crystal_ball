@@ -19,13 +19,14 @@ public class CircleView extends VBox {
         resultLabel = new Label("24");
         resultLabel.setId("resultLabel");
 
-        Canvas canvasBigRound = new Canvas(450, 450);
+        Canvas canvasBigRound = new Canvas(350, 350);
         canvasBigRound.setId("canvas");
 
         GraphicsContext gc = canvasBigRound.getGraphicsContext2D();
         drawShapes(gc);
 
         StackPane stackPane = new StackPane(canvasBigRound,resultLabel);
+        stackPane.setId("stackPane");
 
         this.setId("mainVBox");
         this.getStylesheets().addAll("/resources/style/Circle.css");
@@ -36,10 +37,10 @@ public class CircleView extends VBox {
         gc.setFill(Color.BLACK);
         gc.setStroke(Color.BLUE);
         gc.setLineWidth(5);
-        gc.fillOval(75, 30, 300, 300);
+        gc.fillOval(25, 30, 300, 300);
 
         gc.setFill(Color.WHITE);
-        gc.fillOval(155, 100, 145, 145);
+        gc.fillOval(100, 100, 145, 145);
 
     }
 }

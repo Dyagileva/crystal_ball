@@ -18,6 +18,7 @@ public class WindowManager
 
 
         Scene mainScene = new Scene(mainWindowView,450,600);
+        stage.setResizable(false);
 
         stage.setTitle("Crystal Ball");
         stage.setScene(mainScene);
