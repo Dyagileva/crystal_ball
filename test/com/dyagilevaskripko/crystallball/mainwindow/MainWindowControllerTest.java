@@ -5,7 +5,7 @@ import javafx.embed.swing.JFXPanel;
 import javafx.scene.control.TextField;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.testng.annotations.BeforeMethod;
+
 
 import javax.swing.*;
 import java.io.IOException;

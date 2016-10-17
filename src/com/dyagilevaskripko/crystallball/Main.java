@@ -10,7 +10,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Core core = new Core(primaryStage);
-        core.start();
+        core.execute ();
     }
 
 
