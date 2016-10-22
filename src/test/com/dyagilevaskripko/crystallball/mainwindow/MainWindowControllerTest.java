@@ -72,7 +72,7 @@ public class MainWindowControllerTest {
         TextField test = new TextField();
         TextField test1 = new TextField();
         test.setText("21");
-        test1.setText("sad");
+        test1.setText("sds");
 
         assertEquals(false,mainWindowController.checkIfValueOK(test,test1));
     }
