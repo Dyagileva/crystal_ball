@@ -11,21 +11,17 @@ import javafx.scene.paint.Color;
  * Created by dyagi on 10.10.2016.
  */
 public class CircleView extends VBox {
-    private Label resultLabel;
 
     public CircleView() {
         this.setId("circleStackPane");
-
-        resultLabel = new Label("24");
-        resultLabel.setId("resultLabel");
-
+        
         Canvas canvasBigRound = new Canvas(350, 350);
         canvasBigRound.setId("canvas");
 
         GraphicsContext gc = canvasBigRound.getGraphicsContext2D();
         drawShapes(gc);
 
-        StackPane stackPane = new StackPane(canvasBigRound,resultLabel);
+        StackPane stackPane = new StackPane(canvasBigRound);
         stackPane.setId("stackPane");
 
         this.setId("mainVBox");
