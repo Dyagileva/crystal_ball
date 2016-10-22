@@ -76,4 +76,5 @@ public class MainWindowControllerTest {
 
         assertEquals(false,mainWindowController.checkIfValueOK(test,test1));
     }
+
 }

@@ -37,6 +37,14 @@ public class MainWindowController {
 
     public boolean checkIfValueOK(TextField minTextField,TextField maxTextField)
     {
-        return minTextField.getText().matches("[0-9]+") && maxTextField.getText().matches("[0-9]+");
+        if (minTextField.getText().matches("[0-9]+") && maxTextField.getText().matches("[0-9]+" ))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+//        return minTextField.getText().matches("[0-9]+") && maxTextField.getText().matches("[0-9]+");
     }
 }
