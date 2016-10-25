@@ -12,7 +12,7 @@ import javafx.scene.paint.Color;
  */
 public class CircleView extends VBox {
     private Label resultLabel;
-
+/**sdfghjkl;**/
     public CircleView() {
         this.setId("circleStackPane");
 
