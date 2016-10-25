@@ -16,7 +16,7 @@ public class CircleView extends VBox {
     public CircleView() {
         this.setId("circleStackPane");
 
-        resultLabel = new Label("10");
+        resultLabel = new Label("21");
         resultLabel.setId("resultLabel");
 
         Canvas canvasBigRound = new Canvas(350, 350);
