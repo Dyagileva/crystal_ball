@@ -16,6 +16,8 @@ public class CircleView extends VBox {
     public CircleView() {
         this.setId("circleStackPane");
 
+        /** dfghjkl**/
+
         resultLabel = new Label("64");
         resultLabel.setId("resultLabel");
 
