@@ -1,12 +1,8 @@
 package com.dyagilevaskripko.crystallball;
 
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
+import com.dyagilevaskripko.crystallball.db.DataBase;
 import javafx.stage.Stage;
 
-/**
- * TODO add comment
- */
 public class Core
 {
     private WindowManager windowManager;
@@ -20,6 +16,12 @@ public class Core
 
     public void execute()
     {
-        windowManager.showMainWindow(primaryStage);
+        boolean connectionResult = DataBase.connection();
+
+        if (connectionResult){
+            DataBase.createTable();
+            windowManager.showMainWindow(primaryStage);
+        }
+
     }
 }

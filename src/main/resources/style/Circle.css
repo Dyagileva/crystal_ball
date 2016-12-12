@@ -2,10 +2,11 @@
 {
     -fx-font-size: 24pt;
     -fx-padding: 0 10 15 0;
+    -fx-text-fill: #58A5C8;;
 }
 
 #stackPane
 {
     -fx-min-height: 150px;
-    -fx-background-color: white;
+    -fx-background-color: #3B3E3C;
 }

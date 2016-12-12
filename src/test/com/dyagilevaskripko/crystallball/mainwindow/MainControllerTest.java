@@ -1,24 +1,21 @@
 package com.dyagilevaskripko.crystallball.mainwindow;
 
-import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.control.TextField;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.testng.annotations.BeforeMethod;
 
 import javax.swing.*;
-import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static junit.framework.TestCase.assertEquals;
 
 /**
  * Created by dyagi on 11.10.2016.
  */
-public class MainWindowControllerTest {
+public class MainControllerTest
+{
 
     @BeforeClass
     public static void initToolkit()
@@ -38,43 +35,43 @@ public class MainWindowControllerTest {
     @Test
     public void checkIfValueOKTest()
     {
-        MainWindowView mainWindowView = new MainWindowView();
-        MainWindowController mainWindowController = new MainWindowController(mainWindowView);
+        MainView mainWindowView = new MainView();
+        MainController mainController = new MainController(mainWindowView);
 
         TextField test = new TextField();
         TextField test1 = new TextField();
         test.setText("24");
         test1.setText("21");
 
-        assertEquals(true,mainWindowController.checkIfValueOK(test,test1));
+        assertEquals(true, mainController.checkIfValueOK(test, test1,new TextField("ses")));
     }
 
     @Test
     public void checkIfValueOKTestErrorOne()
     {
-        MainWindowView mainWindowView = new MainWindowView();
-        MainWindowController mainWindowController = new MainWindowController(mainWindowView);
+        MainView mainWindowView = new MainView();
+        MainController mainController = new MainController(mainWindowView);
 
         TextField test = new TextField();
         TextField test1 = new TextField();
         test.setText("sdsd");
         test1.setText("21");
 
-        assertEquals(false,mainWindowController.checkIfValueOK(test,test1));
+        assertEquals(false, mainController.checkIfValueOK(test, test1,new TextField("1")));
     }
 
     @Test
     public void checkIfValueOKTestErrorTwo()
     {
-        MainWindowView mainWindowView = new MainWindowView();
-        MainWindowController mainWindowController = new MainWindowController(mainWindowView);
+        MainView mainWindowView = new MainView();
+        MainController mainController = new MainController(mainWindowView);
 
         TextField test = new TextField();
         TextField test1 = new TextField();
         test.setText("21");
         test1.setText("sds");
 
-        assertEquals(false,mainWindowController.checkIfValueOK(test,test1));
+        assertEquals(false, mainController.checkIfValueOK(test, test1,new TextField("ses")));
     }
 
 }

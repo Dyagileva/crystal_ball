@@ -1,0 +1,49 @@
+
+#headerVBox
+{
+    -fx-background-color: #3B3E3C;
+    -fx-padding: 0 24 24 24;
+    -fx-effect: dropshadow(three-pass-box, black, 10, 0, 0, 0);
+}
+
+#centerVBox
+{
+    -fx-background-color: #3B3E3C;
+    -fx-padding: 10 0 12 0;
+}
+
+.buttonsVBox
+{
+    -fx-background-color: #3B3E3C;
+    -fx-alignment: center;
+    -fx-padding: 0 0 24 0;
+}
+
+.errorLabel
+{
+    -fx-font-size: 12pt;
+    -fx-padding: 0 0 2 0;
+    -fx-text-fill: red;
+}
+
+.generateButton
+ {
+     -fx-background-color: #3B3E3C;
+     -fx-min-width: 88px;
+     -fx-border-color: #A9A9A9;
+     -fx-font-weight: bold;
+     -fx-border-radius: 5 5 5 5;
+     -fx-text-fill: #58A5C8;
+ }
+
+.generateButton:hover
+{
+    -fx-text-fill:#D39B46;
+    -fx-cursor: hand;
+}
+
+.generateButton:pressed
+{
+    -fx-background-color:#D39B46;
+    -fx-text-fill: #3B3E3C;
+}

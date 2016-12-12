@@ -1,0 +1,76 @@
+.text
+{
+    -fx-font-smoothing-type: gray;
+}
+
+#tableViewVBox
+{
+    -fx-padding: 24;
+    -fx-spacing: 5px;
+    /*-fx-pref-height: 200px;*/
+    -fx-min-height: 150px;
+    -fx-background-color: #3B3E3C;
+}
+
+#logLabel
+{
+    -fx-font-size: 12pt;
+    -fx-text-fill: gray;
+}
+
+#commandTableView
+{
+    -fx-background-radius: 5 5 5 5;
+    /*-fx-background-color: #323534;*/
+    -fx-background-color: #262827;
+    -fx-table-cell-border-color: #262827;
+}
+
+#commandTableView .table-cell
+{
+    -fx-alignment: center;
+    -fx-font-size: 10pt;
+    -fx-text-fill: white;
+}
+
+#commandTableView .column-header-background .filler
+{
+    -fx-background-color: #323534;
+    -fx-padding: 1em;
+}
+
+#commandTableView .column-header
+{
+    -fx-background-color: #323534;
+}
+
+#commandTableView .column-header-background
+{
+    -fx-background-color: #323534;
+}
+
+#commandTableView .column-header-background .label
+{
+    -fx-background-color: #323534;
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+    -fx-alignment: center;
+    -fx-font-family: "Roboto Regular";
+}
+
+#commandTableView .table-row-cell:selected
+{
+    -fx-background-color: #58A5C8;
+    /*-fx-background-insets: 0;*/
+    /*-fx-background-radius: 1;*/
+    -fx-background-radius: 5 5 5 5;
+    -fx-table-cell-border-color: transparent;
+}
+
+#commandTableView .table-row-cell
+{
+    -fx-background-color: #262827;
+    -fx-background-insets: 0, 0 0 0 0;
+    -fx-padding: 0.0em; /* 0 */
+
+}

@@ -10,13 +10,15 @@ import javafx.scene.paint.Color;
 /**
  * Created by dyagi on 10.10.2016.
  */
-public class CircleView extends VBox {
+public class CircleView extends VBox
+{
     private Label resultLabel;
 
-    public CircleView() {
+    public CircleView()
+    {
         this.setId("circleStackPane");
 
-        resultLabel = new Label("64");
+        resultLabel = new Label("...");
         resultLabel.setId("resultLabel");
 
         Canvas canvasBigRound = new Canvas(350, 350);
@@ -25,22 +27,32 @@ public class CircleView extends VBox {
         GraphicsContext gc = canvasBigRound.getGraphicsContext2D();
         drawShapes(gc);
 
-        StackPane stackPane = new StackPane(canvasBigRound,resultLabel);
+        StackPane stackPane = new StackPane(canvasBigRound, resultLabel);
         stackPane.setId("stackPane");
 
         this.setId("mainVBox");
-        this.getStylesheets().addAll("/resources/style/Circle.css");
+        this.getStylesheets().addAll("style/Circle.css");
         this.getChildren().addAll(stackPane);
     }
 
-    private void drawShapes(GraphicsContext gc) {
-        gc.setFill(Color.BLACK);
+    private void drawShapes(GraphicsContext gc)
+    {
+        gc.setFill(Color.web("#2D2F2D"));
         gc.setStroke(Color.BLUE);
         gc.setLineWidth(5);
         gc.fillOval(25, 30, 300, 300);
 
-        gc.setFill(Color.WHITE);
+        gc.setFill(Color.web("#4E524E"));
         gc.fillOval(100, 100, 145, 145);
+    }
 
+    public void setValue(Integer value)
+    {
+        resultLabel.setText(value.toString());
+    }
+
+    public Integer getValue()
+    {
+        return Integer.parseInt(resultLabel.getText());
     }
 }
