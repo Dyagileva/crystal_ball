@@ -49,6 +49,7 @@ public class MainController
                                        if (checkIfValueOK(minTextField, maxTextField, mainView.getNameTextField()))
                                        {
                                            errorLabel.setVisible(false);
+
                                            int randomNumber = random(Integer.parseInt(minTextField.getText()),
                                                                      Integer.parseInt(maxTextField.getText()));
                                            mainView.setValue(randomNumber);
